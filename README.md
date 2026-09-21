@@ -1,4 +1,4 @@
-﻿<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Noah%20Otim&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%E2%80%A2%20Builder%20%E2%80%A2%20Practical%20Systems&descAlignY=55&descAlign=50" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Noah%20Otim&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%E2%80%A2%20Builder%20%E2%80%A2%20Practical%20Systems&descAlignY=55&descAlign=50" />
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=900&color=0EA5E9&center=true&vCenter=true&width=740&lines=Building+practical+software+that+solves+real+problems;AI+and+automation+for+work+that+compounds;Marketing+%2C+content+and+growth+without+the+hype;Remove+friction.+Ship+consistently." />
@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/noahotim"><img src="https://img.shields.io/badge/GitHub-noahotim-111827?style=for-the-badge&logo=github" /></a>
-  <a href="https://github.com/noahotim/content-growth-machine"><img src="https://img.shields.io/badge/Portfolio-Content%20Growth-0EA5E9?style=for-the-badge" /></a>
+  <a href="https://noahotim.github.io/portfolio/"><img src="https://img.shields.io/badge/Portfolio-Content%20Growth-0EA5E9?style=for-the-badge" /></a>
   <img src="https://komarev.com/ghpvc/?username=noahotim&style=for-the-badge&color=6366f1&label=Profile+Views" />
   <img src="https://img.shields.io/github/followers/noahotim?style=for-the-badge&color=10B981&label=Followers" />
 </p>
