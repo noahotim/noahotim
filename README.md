@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/noahotim"><img src="https://img.shields.io/badge/GitHub-noahotim-111827?style=for-the-badge&logo=github" alt="GitHub" /></a>
   <a href="https://noahotim.github.io/portfolio/"><img src="https://img.shields.io/badge/Portfolio-Live-0EA5E9?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio" /></a>
-  <img src="https://komarev.com/ghpvc/?username=noahotim&style=for-the-badge&color=6366f1&label=Profile%20Views" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=noahotim&label=Profile%20views&color=6366f1&style=for-the-badge" alt="Profile views" />
   <img src="https://img.shields.io/github/followers/noahotim?style=for-the-badge&color=10B981&label=Followers" alt="Followers" />
 </p>
 
