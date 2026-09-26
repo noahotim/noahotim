@@ -102,6 +102,20 @@ When you see my name you think: practical, honest and ahead
 
 ---
 
+### 🌍 Contribution Globe
+
+<p align="center">
+  <a href="https://noahotim.github.io/github-contrib-globe-badge/">
+    <img src="https://raw.githubusercontent.com/noahotim/github-contrib-globe-badge/main/badge.gif" alt="My contributions badge — globe" />
+  </a>
+</p>
+
+<p align="center">
+  <em>Daily-updating globe of where owners of repos I contribute to are located. Click the badge for the interactive <a href="https://github.com/shuding/cobe">Cobe</a> globe. Built from <a href="https://github.com/noahotim/github-contrib-globe-badge">noahotim/github-contrib-globe-badge</a> (forked from <a href="https://github.com/turbolego/github-contrib-globe-badge">turbolego/github-contrib-globe-badge</a>).</em>
+</p>
+
+---
+
 ### 📊 Activity
 
 <p align="center">
