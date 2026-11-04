@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="LoRa UPS battery monitor — final-year IoT project">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070d13"/>
+      <stop offset="0.6" stop-color="#0a121a"/>
+      <stop offset="1" stop-color="#060b11"/>
+    </linearGradient>
+    <linearGradient id="sig" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#22d3ee"/>
+      <stop offset="0.75" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#0e1d27" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="430" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="430" rx="18" fill="url(#grid)" opacity="0.5"/>
+  <rect x="1" y="1" width="1198" height="428" rx="17" fill="none" stroke="#1f4456" stroke-width="2"/>
+
+  <!-- corner pads -->
+  <g fill="#0a1119" stroke="#d98b3a" stroke-width="2">
+    <circle cx="22" cy="22" r="4"/>
+    <circle cx="1178" cy="22" r="4"/>
+    <circle cx="22" cy="408" r="4"/>
+    <circle cx="1178" cy="408" r="4"/>
+  </g>
+
+  <!-- eyebrow -->
+  <text x="64" y="76" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="3" fill="#f0b070">FINAL-YEAR PROJECT · 2025</text>
+
+  <!-- title -->
+  <text x="62" y="134" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="0.5" fill="#e8f4fa">LoRa UPS Battery Monitor</text>
+
+  <!-- signal path -->
+  <text x="64" y="176" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="1" fill="#8fd8ea">ESP32 + SX1276 → Heltec gateway → TTN → Firebase → Flutter</text>
+
+  <!-- radio diagram -->
+  <g>
+    <rect x="806" y="70" width="86" height="72" rx="10" fill="#0b141c" stroke="#2b5670" stroke-width="1.5"/>
+    <text x="849" y="103" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1" fill="#8fd8ea">NODE</text>
+    <text x="849" y="122" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" fill="#5f7c8c">ESP32</text>
+
+    <rect x="940" y="70" width="86" height="72" rx="10" fill="#0b141c" stroke="#2b5670" stroke-width="1.5"/>
+    <text x="983" y="103" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1" fill="#8fd8ea">GATEWAY</text>
+    <text x="983" y="122" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" fill="#5f7c8c">HELTEC</text>
+
+    <path d="M892 106H940" stroke="#173040" stroke-width="2" stroke-dasharray="4 5"/>
+    <g fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.9">
+      <path d="M902 92Q914 106 902 120"/>
+      <path d="M914 84Q932 106 914 128"/>
+    </g>
+
+    <rect x="1078" y="70" width="86" height="72" rx="10" fill="#0b141c" stroke="#1f4456" stroke-width="1.5"/>
+    <text x="1121" y="103" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1" fill="#34d399">CLOUD</text>
+    <text x="1121" y="122" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" fill="#5f7c8c">FIREBASE</text>
+    <path d="M1026 106H1078" stroke="#173040" stroke-width="2" stroke-dasharray="4 5"/>
+  </g>
+
+  <!-- metric tiles -->
+  <g>
+    <rect x="64" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="86" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">≤0.1 V</text>
+    <text x="86" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">VOLTAGE ERROR</text>
+
+    <rect x="332" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="354" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">1.5 km</text>
+    <text x="354" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">RELIABLE RANGE · 3.3 KM MAX</text>
+
+    <rect x="600" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="622" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">2–3 s</text>
+    <text x="622" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">READING TO DASHBOARD</text>
+
+    <rect x="868" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="890" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">6+ mo</text>
+    <text x="890" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">ON 9 V · 8 mA, &lt;100 µA SLEEP</text>
+  </g>
+
+  <!-- waveform -->
+  <path d="M64 372H200L216 356H320L336 372H470L486 356H590L606 372H740L756 356H860L876 372H1010L1026 356H1136"
+        fill="none" stroke="url(#sig)" stroke-width="2.5" stroke-linejoin="round" filter="url(#glow)"/>
+  <g fill="#f0b070">
+    <circle cx="1136" cy="356" r="2.6"/>
+    <circle cx="64" cy="372" r="2.6" opacity="0.6"/>
+  </g>
+
+  <!-- footer -->
+  <text x="64" y="405" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.5" fill="#6f8794">SOROTI UNIVERSITY · BENG ELECTRONICS &amp; COMPUTER ENGINEERING</text>
+  <text x="1136" y="405" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="11" fill="#22d3ee">portfolio/#iot</text>
+</svg>

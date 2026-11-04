@@ -105,6 +105,22 @@ KiCad · schematic capture · soldering · multimeter · logic analyzer
 
 ---
 
+### 📡 Final-Year IoT Project
+
+<p align="center">
+  <a href="https://noahotim.github.io/portfolio/#iot">
+    <img src="assets/iot-card.svg" alt="LoRa UPS battery monitor — ≤0.1 V error, 1.5 km range, 2–3 s latency, 6+ months on 9 V" width="100%" />
+  </a>
+</p>
+
+An ESP32 sensor node reads a UPS battery's voltage, temperature and humidity and sends it over LoRaWAN to The Things Network, then Firebase and a Flutter app — so a failing battery at a remote site reports itself before it takes the load down. Field-tested at **1.5 km** reliable range (3.3 km best case), **≤0.1 V** voltage error and **2–3 s** from reading to dashboard, with alerts firing on threshold breaches.
+
+<p align="center">
+  <a href="https://noahotim.github.io/portfolio/#iot"><b>Read the case study →</b></a>
+</p>
+
+---
+
 ### 🚀 Featured Projects
 
 | Project | Description | Stack |
