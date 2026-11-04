@@ -109,6 +109,7 @@ KiCad · schematic capture · soldering · multimeter · logic analyzer
 
 | Project | Description | Stack |
 |---|---|---|
+| [**LoRa UPS battery monitor**](https://noahotim.github.io/portfolio/#iot) | Final-year IoT research — LoRaWAN battery monitoring for UPS reliability | ESP32 • LoRa • TTN |
 | [**content-growth-machine**](https://github.com/noahotim/content-growth-machine) | Content system for LinkedIn growth — posts, graphics and voice | Next.js • Voice System |
 | [**educontrol-school-system**](https://github.com/noahotim/educontrol-school-system) | School management platform | TypeScript • System Design |
 | [**otzu-tech-solutions**](https://github.com/noahotim/otzu-tech-solutions) | Agency site and client systems | Next.js • Tailwind |
