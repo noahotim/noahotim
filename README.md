@@ -1,40 +1,44 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Noah%20Otim&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%E2%80%A2%20Builder%20%E2%80%A2%20Practical%20Systems&descAlignY=55&descAlign=50" />
-
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=900&color=0EA5E9&center=true&vCenter=true&width=740&lines=Building+practical+software+that+solves+real+problems;AI+and+automation+for+work+that+compounds;Marketing+%2C+content+and+growth+without+the+hype;Remove+friction.+Ship+consistently." alt="Typing SVG" />
+  <img src="assets/banner.svg" alt="Noah Otim — Software Engineer and Electronics" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/noahotim"><img src="https://img.shields.io/badge/GitHub-noahotim-111827?style=for-the-badge&logo=github" alt="GitHub" /></a>
-  <a href="https://noahotim.github.io/portfolio/"><img src="https://img.shields.io/badge/Portfolio-Live-0EA5E9?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio" /></a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&pause=900&color=22D3EE&center=true&vCenter=true&width=760&lines=Software+that+talks+to+hardware+and+people;Embedded+logic+%E2%80%94+sensors%2C+signals%2C+interfaces;Web+systems+that+remove+friction;Clean+signals.+Consistent+ships." alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/noahotim"><img src="https://img.shields.io/badge/GitHub-noahotim-0A1119?style=for-the-badge&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
+  <a href="https://noahotim.github.io/portfolio/"><img src="https://img.shields.io/badge/Portfolio-Live-22D3EE?style=for-the-badge&logo=safari&logoColor=0A1119" alt="Portfolio" /></a>
   <img src="https://profile-views.otim-no25.workers.dev/badge" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/noahotim?style=for-the-badge&color=10B981&label=Followers" alt="Followers" />
+  <img src="https://img.shields.io/github/followers/noahotim?style=for-the-badge&color=D98B3A&label=Followers" alt="Followers" />
 </p>
 
----
+<p align="center">
+  <img src="assets/divider.svg" alt="" width="100%" />
+</p>
 
 ### 👋 About Me
 
-People overcomplicate it. Good engineering and good marketing share the same principle: **remove friction, focus on what works, and ship consistently.**
+I work where **code meets current** — software systems on one side, circuits and sensors on the other. Good engineering in both looks the same: **remove friction, respect the signal, and ship consistently.**
 
 <table>
 <tr>
-<td>
+<td valign="top" width="50%">
 
 **🔧 Role**  
-Software engineer — practical systems over complexity
+Software engineer building practical systems — web, automation and embedded interfaces
 
-**🎯 Audience**  
-Marketers, founders and small teams who want tactics they can use today
+**⚡ Electronics**  
+Microcontrollers, sensors and serial protocols — turning physical signals into usable data
 
 </td>
-<td>
+<td valign="top" width="50%">
 
-**📚 Pillars**  
-AI and automation • Marketing and content • Leadership and culture
+**🎯 Focus**  
+Founders and small teams that need tools they can actually run today
 
-**✨ Promise**  
-When you see my name you think: practical, honest and ahead
+**✨ Principle**  
+When you see my name: practical, honest, and already working on the next revision
 
 </td>
 </tr>
@@ -42,24 +46,61 @@ When you see my name you think: practical, honest and ahead
 
 ---
 
-### 🛠️ Tech Stack
+### 🛠️ Software Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,nodejs,nextjs,react,tailwind,python,docker,git,github,vercel,figma&perline=6" alt="Tech stack icons" />
+  <img src="https://skillicons.dev/icons?i=ts,js,nodejs,nextjs,react,tailwind,python,docker,git,github,vercel,linux&perline=6" alt="Software stack" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Next.js-111827?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=111827" alt="React" />
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-0A1119?style=for-the-badge&logo=typescript&logoColor=22D3EE" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Next.js-0A1119?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-0A1119?style=for-the-badge&logo=react&logoColor=22D3EE" alt="React" />
+  <img src="https://img.shields.io/badge/Node.js-0A1119?style=for-the-badge&logo=nodedotjs&logoColor=34D399" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Python-0A1119?style=for-the-badge&logo=python&logoColor=D98B3A" alt="Python" />
+  <img src="https://img.shields.io/badge/Docker-0A1119?style=for-the-badge&logo=docker&logoColor=22D3EE" alt="Docker" />
 </p>
+
+---
+
+### ⚡ Hardware & Electronics
+
+<table>
+<tr>
+<td valign="top" width="33%">
+
+**Boards**  
+ESP32 · Arduino · Raspberry Pi · STM32 basics
+
+</td>
+<td valign="top" width="33%">
+
+**Signals**  
+GPIO · I²C · SPI · UART · PWM · ADC
+
+</td>
+<td valign="top" width="33%">
+
+**Bench**  
+KiCad · schematic capture · soldering · multimeter · logic analyzer
+
+</td>
+</tr>
+</table>
+
 <p align="center">
-  <img src="https://img.shields.io/badge/AI%20Automation-0EA5E9?style=for-the-badge" alt="AI" />
-  <img src="https://img.shields.io/badge/Marketing-10B981?style=for-the-badge" alt="Marketing" />
-  <img src="https://img.shields.io/badge/Growth-6366F1?style=for-the-badge" alt="Growth" />
+  <img src="https://skillicons.dev/icons?i=arduino,raspberrypi,c,cpp,bash,git&perline=6" alt="Embedded stack" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Embedded%20C-0A1119?style=for-the-badge&logo=c&logoColor=8FD8EA" alt="Embedded C" />
+  <img src="https://img.shields.io/badge/IoT-0A1119?style=for-the-badge&logo=espressif&logoColor=D98B3A" alt="IoT" />
+  <img src="https://img.shields.io/badge/MQTT-0A1119?style=for-the-badge&logo=mqtt&logoColor=34D399" alt="MQTT" />
+  <img src="https://img.shields.io/badge/KiCad-0A1119?style=for-the-badge&logo=kicad&logoColor=22D3EE" alt="KiCad" />
+</p>
+
+<p align="center">
+  <em>From schematic → firmware → dashboard: a sensor reading is only useful once it reaches a screen and a decision.</em>
 </p>
 
 ---
@@ -78,9 +119,9 @@ When you see my name you think: practical, honest and ahead
 ### 📈 GitHub Analytics
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/noahotim/content-growth-machine?style=for-the-badge&logo=github&label=Stars%3A%20content-growth-machine" alt="content-growth-machine stars" />
-  <img src="https://img.shields.io/github/stars/noahotim/portfolio?style=for-the-badge&logo=github&label=Stars%3A%20portfolio" alt="portfolio stars" />
-  <img src="https://img.shields.io/github/stars/noahotim/noahotim?style=for-the-badge&logo=github&label=Stars%3A%20profile" alt="profile stars" />
+  <img src="https://img.shields.io/github/stars/noahotim/content-growth-machine?style=for-the-badge&logo=github&label=Stars%3A%20content-growth-machine&color=22D3EE" alt="content-growth-machine stars" />
+  <img src="https://img.shields.io/github/stars/noahotim/portfolio?style=for-the-badge&logo=github&label=Stars%3A%20portfolio&color=D98B3A" alt="portfolio stars" />
+  <img src="https://img.shields.io/github/stars/noahotim/noahotim?style=for-the-badge&logo=github&label=Stars%3A%20profile&color=34D399" alt="profile stars" />
 </p>
 
 <p align="center">
@@ -93,7 +134,6 @@ When you see my name you think: practical, honest and ahead
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=noahotim&theme=tokyonight" height="165" alt="Productive time" />
 </p>
 
-<!-- Fixed streak-stats URL: added slash after domain to bust camo cache - see https://github.com/DenverCoder1/github-readme-streak-stats -->
 <p align="center">
   <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
     <img src="https://streak-stats.demolab.com/?user=noahotim&theme=tokyonight&hide_border=true&border_radius=8" alt="GitHub Streak Stats" />
@@ -111,7 +151,7 @@ When you see my name you think: practical, honest and ahead
 </p>
 
 <p align="center">
-  <em>Daily-updating globe of where owners of repos I contribute to are located. Click the badge for the interactive <a href="https://github.com/shuding/cobe">Cobe</a> globe. Built from <a href="https://github.com/noahotim/github-contrib-globe-badge">noahotim/github-contrib-globe-badge</a> (forked from <a href="https://github.com/turbolego/github-contrib-globe-badge">turbolego/github-contrib-globe-badge</a>).</em>
+  <em>Every commit I author, mapped. Daily-updating globe; click the badge for the interactive <a href="https://github.com/shuding/cobe">Cobe</a> globe. Built from <a href="https://github.com/noahotim/github-contrib-globe-badge">noahotim/github-contrib-globe-badge</a>.</em>
 </p>
 
 ---
@@ -119,7 +159,7 @@ When you see my name you think: practical, honest and ahead
 ### 📊 Activity
 
 <p align="center">
-  <img src="https://activity-graph.vercel.app/graph?username=noahotim&theme=tokyo-night&hide_border=true&area=true&bg_color=1a1b27&color=0EA5E9&line=6366f1&point=ffffff" alt="Activity graph" />
+  <img src="https://activity-graph.vercel.app/graph?username=noahotim&bg_color=0A1119&color=22D3EE&line=D98B3A&point=E8F4FA&area=true&hide_border=true" alt="Activity graph" />
 </p>
 
 ### 🐍 Contribution Snake
@@ -136,21 +176,25 @@ When you see my name you think: practical, honest and ahead
 
 ### 💡 What I Share
 
-- **Practical AI workflows** that save hours, not hype
-- **Content and growth tactics** that compound
-- **Leadership notes** from building small teams
+- **Software that earns its place** — automation, tools and interfaces that save hours
+- **Hardware notes** — sensor readouts, board bring-up and the boring parts that matter
+- **Signal over noise** — growth and content tactics that compound
 
 ### 📬 Connect
 
 <p align="center">
-  <b>Open to collaborations on AI tools, content systems and practical software.</b><br/>
+  <b>Open to collaborations on embedded products, IoT systems and practical software.</b><br/>
   <a href="https://github.com/noahotim">GitHub</a> • <a href="https://noahotim.github.io/portfolio/">Portfolio</a> • Content Growth Machine • EduControl
 </p>
 
----
-
 <p align="center">
-  <i>Built with <a href="https://github.com/LHRUN/bubble">Bubble</a> — curated README components</i>
+  <img src="assets/divider.svg" alt="" width="100%" />
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&text=Let's%20build%20something%20practical&fontSize=18&fontColor=ffffff&animation=fadeIn" alt="Footer" />
+<p align="center">
+  <i>Designed as a circuit — built with <a href="https://github.com/LHRUN/bubble">Bubble</a></i>
+</p>
+
+<p align="center">
+  <img src="assets/footer.svg" alt="Remove friction, ship consistently, keep the signal clean" width="100%" />
+</p>

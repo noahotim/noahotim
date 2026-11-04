@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Noah Otim — Software Engineer and Electronics">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05080d"/>
+      <stop offset="0.55" stop-color="#0a1119"/>
+      <stop offset="1" stop-color="#060b11"/>
+    </linearGradient>
+    <linearGradient id="sig" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#22d3ee"/>
+      <stop offset="0.72" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d98b3a" stop-opacity="0.1"/>
+      <stop offset="0.45" stop-color="#f0b070"/>
+      <stop offset="1" stop-color="#d98b3a" stop-opacity="0.1"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#0e1d27" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- copper pours -->
+  <path d="M0 0H1200V12H0Z" fill="#0c1820"/>
+  <path d="M0 288H1200V300H0Z" fill="#0c1820"/>
+
+  <!-- pcb traces: left -->
+  <g fill="none" stroke="#173040" stroke-width="2">
+    <path d="M0 252H132L168 216H236"/>
+    <path d="M0 64H96L132 100H188"/>
+    <path d="M24 300V272L60 236H108"/>
+    <path d="M204 300V264L236 232H292"/>
+  </g>
+  <g fill="none" stroke="#1d4053" stroke-width="2">
+    <path d="M0 176H64L96 144H152"/>
+    <path d="M148 300V252L180 220H224"/>
+  </g>
+
+  <!-- pcb traces: right -->
+  <g fill="none" stroke="#173040" stroke-width="2">
+    <path d="M1200 84H1096L1060 120H1012"/>
+    <path d="M1200 236H1112L1076 200H1024"/>
+    <path d="M1032 0V36L996 72H948"/>
+    <path d="M1176 0V28L1140 64H1090"/>
+  </g>
+
+  <!-- vias and copper pads -->
+  <g fill="#0a1119" stroke="#d98b3a" stroke-width="2">
+    <circle cx="236" cy="216" r="6"/>
+    <circle cx="188" cy="100" r="6"/>
+    <circle cx="108" cy="236" r="6"/>
+    <circle cx="292" cy="232" r="6"/>
+    <circle cx="152" cy="144" r="6"/>
+    <circle cx="224" cy="220" r="6"/>
+    <circle cx="1012" cy="120" r="6"/>
+    <circle cx="1024" cy="200" r="6"/>
+    <circle cx="948" cy="72" r="6"/>
+    <circle cx="1090" cy="64" r="6"/>
+  </g>
+  <g fill="#f0b070" opacity="0.9">
+    <circle cx="236" cy="216" r="2.4"/>
+    <circle cx="188" cy="100" r="2.4"/>
+    <circle cx="152" cy="144" r="2.4"/>
+    <circle cx="1012" cy="120" r="2.4"/>
+    <circle cx="948" cy="72" r="2.4"/>
+  </g>
+
+  <!-- chip -->
+  <g transform="translate(64 78)">
+    <rect x="0" y="0" width="120" height="120" rx="14" fill="#0b141c" stroke="#24485c" stroke-width="2"/>
+    <rect x="14" y="14" width="92" height="92" rx="8" fill="none" stroke="#1a3545" stroke-width="1.5"/>
+    <circle cx="20" cy="20" r="3" fill="#d98b3a"/>
+    <g stroke="#2b5670" stroke-width="3" stroke-linecap="round">
+      <path d="M24 0V-14M48 0V-14M72 0V-14M96 0V-14"/>
+      <path d="M24 120V134M48 120V134M72 120V134M96 120V134"/>
+      <path d="M0 24H-14M0 48H-14M0 72H-14M0 96H-14"/>
+      <path d="M120 24H134M120 48H134M120 72H134M120 96H134"/>
+    </g>
+    <g fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+      <path d="M34 84V64L46 52H70"/>
+      <path d="M34 84H58L70 72"/>
+      <path d="M46 52V40"/>
+    </g>
+    <circle cx="70" cy="52" r="3" fill="#34d399"/>
+    <circle cx="70" cy="72" r="3" fill="#34d399"/>
+  </g>
+
+  <!-- oscilloscope trace -->
+  <path d="M700 150H760V120H820V180H880V120H940V180H1000V150H1060V132H1120"
+        fill="none" stroke="url(#sig)" stroke-width="3" stroke-linejoin="round" filter="url(#glow)"/>
+  <g fill="#22d3ee" opacity="0.55">
+    <circle cx="760" cy="150" r="2.5"/>
+    <circle cx="1060" cy="150" r="2.5"/>
+  </g>
+  <g stroke="#15303f" stroke-width="1">
+    <path d="M690 210H1170"/>
+    <path d="M700 100V260M820 100V260M940 100V260M1060 100V260"/>
+  </g>
+
+  <!-- type -->
+  <text x="228" y="136" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="2" fill="#e8f4fa">NOAH OTIM</text>
+  <text x="231" y="172" font-family="Consolas, Menlo, monospace" font-size="16" letter-spacing="3.5" fill="#7dd3fc">SOFTWARE ENGINEER</text>
+  <rect x="460" y="160" width="46" height="2" fill="url(#copper)"/>
+  <text x="518" y="172" font-family="Consolas, Menlo, monospace" font-size="16" letter-spacing="3.5" fill="#f0b070">ELECTRONICS</text>
+
+  <!-- tag chips -->
+  <g font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1.5">
+    <rect x="230" y="200" width="112" height="26" rx="13" fill="#0d1a23" stroke="#1f4456"/>
+    <text x="242" y="217" fill="#8fd8ea">EMBEDDED</text>
+    <rect x="354" y="200" width="112" height="26" rx="13" fill="#0d1a23" stroke="#1f4456"/>
+    <text x="366" y="217" fill="#8fd8ea">WEB SYSTEMS</text>
+    <rect x="478" y="200" width="118" height="26" rx="13" fill="#0d1a23" stroke="#1f4456"/>
+    <text x="490" y="217" fill="#8fd8ea">SIGNAL CLEAN</text>
+    <rect x="608" y="200" width="96" height="26" rx="13" fill="#0d1a23" stroke="#1f4456"/>
+    <text x="620" y="217" fill="#8fd8ea">IOT</text>
+  </g>
+</svg>

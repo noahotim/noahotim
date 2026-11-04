@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="130" viewBox="0 0 1200 130" role="img" aria-label="Circuit footer">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.25" stop-color="#22d3ee"/>
+      <stop offset="0.55" stop-color="#d98b3a"/>
+      <stop offset="0.8" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="fgrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#0e1d27" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="130" fill="#060b11"/>
+  <rect width="1200" height="130" fill="url(#fgrid)" opacity="0.7"/>
+
+  <path d="M0 26H1200" stroke="#12303f" stroke-width="2"/>
+
+  <!-- main signal trace -->
+  <path d="M80 80H300L324 56H420V104H516L540 80H700L724 56H820V104H916L940 80H1120"
+        fill="none" stroke="url(#fade)" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- stubs -->
+  <g stroke="#1f4456" stroke-width="2">
+    <path d="M360 80V110M700 80V110M880 80V110"/>
+  </g>
+
+  <!-- pads -->
+  <g fill="#0a1119" stroke="#d98b3a" stroke-width="2">
+    <circle cx="300" cy="80" r="5"/>
+    <circle cx="516" cy="80" r="5"/>
+    <circle cx="820" cy="80" r="5"/>
+    <circle cx="940" cy="80" r="5"/>
+  </g>
+  <g fill="#f0b070">
+    <circle cx="300" cy="80" r="1.8"/>
+    <circle cx="516" cy="80" r="1.8"/>
+    <circle cx="820" cy="80" r="1.8"/>
+    <circle cx="940" cy="80" r="1.8"/>
+  </g>
+
+  <!-- chip pins bottom -->
+  <g stroke="#2b5670" stroke-width="3" stroke-linecap="round">
+    <path d="M566 130V118M586 130V118M606 130V118M626 130V118M646 130V118"/>
+  </g>
+  <g fill="#0a1119" stroke="#22d3ee" stroke-width="1.5" opacity="0.7">
+    <circle cx="566" cy="112" r="2.5"/>
+    <circle cx="586" cy="112" r="2.5"/>
+    <circle cx="606" cy="112" r="2.5"/>
+    <circle cx="626" cy="112" r="2.5"/>
+    <circle cx="646" cy="112" r="2.5"/>
+  </g>
+</svg>
