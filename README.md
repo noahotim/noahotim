@@ -105,7 +105,7 @@ KiCad · schematic capture · soldering · multimeter · logic analyzer
 
 ---
 
-### 📡 Final-Year IoT Project
+### 📡 IoT Project
 
 <p align="center">
   <a href="https://noahotim.github.io/portfolio/#iot">

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-label="LoRa UPS battery monitor — final-year IoT project">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="IoT project — LoRa UPS battery monitor: how the system works in the field">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#070d13"/>
@@ -20,77 +20,246 @@
     </filter>
   </defs>
 
-  <rect width="1200" height="430" rx="18" fill="url(#bg)"/>
-  <rect width="1200" height="430" rx="18" fill="url(#grid)" opacity="0.5"/>
-  <rect x="1" y="1" width="1198" height="428" rx="17" fill="none" stroke="#1f4456" stroke-width="2"/>
+  <style>
+    .flow{stroke-dasharray:6 10;animation:flow 1.4s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-16}}
+
+    .pkt{opacity:0;animation:pkt 6s linear infinite}
+    @keyframes pkt{
+      0%{transform:translateX(0);opacity:0}
+      2%{opacity:1}
+      14%{transform:translateX(45px);opacity:1}
+      18%,100%{transform:translateX(45px);opacity:0}
+    }
+
+    .stageGlow{opacity:0;animation:stageGlow 6s linear infinite}
+    @keyframes stageGlow{
+      0%{opacity:0}
+      3%{opacity:.95}
+      12%{opacity:.95}
+      22%,100%{opacity:0}
+    }
+
+    .led{animation:led 1.6s steps(1,end) infinite}
+    @keyframes led{0%,49%{opacity:1}50%,100%{opacity:.15}}
+
+    .wave{animation:wave 2.2s ease-out infinite}
+    @keyframes wave{0%{opacity:.12}35%{opacity:.95}70%,100%{opacity:.12}}
+
+    .sigbar{animation:sigbar 1.8s ease-in-out infinite}
+    @keyframes sigbar{0%,100%{opacity:.3}50%{opacity:1}}
+
+    .sync{animation:sync 3s ease-in-out infinite}
+    @keyframes sync{
+      0%{transform:translateY(0);opacity:0}
+      10%{opacity:1}
+      45%{transform:translateY(10px);opacity:1}
+      60%,100%{transform:translateY(10px);opacity:0}
+    }
+
+    .warn{animation:warn 2.2s ease-in-out infinite}
+    @keyframes warn{0%,100%{opacity:.35}50%{opacity:1}}
+
+    .alert{animation:warn 1.8s ease-in-out infinite}
+    .ring{animation:ring 3s ease-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes ring{0%{transform:scale(.35);opacity:.85}75%,100%{transform:scale(1);opacity:0}}
+
+    .scan{animation:scan 6s linear infinite}
+    @keyframes scan{
+      0%{transform:translateX(0);opacity:0}
+      5%{opacity:.95}
+      95%{opacity:.95}
+      100%{transform:translateX(1080px);opacity:0}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .flow,.pkt,.stageGlow,.led,.wave,.sigbar,.sync,.warn,.alert,.ring,.scan{animation:none!important}
+      .pkt{opacity:0}
+    }
+  </style>
+
+  <rect width="1200" height="520" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="520" rx="18" fill="url(#grid)" opacity="0.5"/>
+  <rect x="1" y="1" width="1198" height="518" rx="17" fill="none" stroke="#1f4456" stroke-width="2"/>
 
   <!-- corner pads -->
   <g fill="#0a1119" stroke="#d98b3a" stroke-width="2">
     <circle cx="22" cy="22" r="4"/>
     <circle cx="1178" cy="22" r="4"/>
-    <circle cx="22" cy="408" r="4"/>
-    <circle cx="1178" cy="408" r="4"/>
+    <circle cx="22" cy="498" r="4"/>
+    <circle cx="1178" cy="498" r="4"/>
   </g>
 
-  <!-- eyebrow -->
-  <text x="64" y="76" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="3" fill="#f0b070">FINAL-YEAR PROJECT · 2025</text>
+  <!-- eyebrow + title -->
+  <text x="64" y="66" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="3" fill="#f0b070">IOT PROJECT · 2025</text>
+  <text x="62" y="122" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="0.5" fill="#e8f4fa">LoRa UPS Battery Monitor</text>
+  <text x="64" y="158" font-family="Consolas, Menlo, monospace" font-size="13" letter-spacing="1" fill="#8fd8ea">ESP32 + SX1276 → Heltec gateway → TTN → Firebase → Flutter</text>
 
-  <!-- title -->
-  <text x="62" y="134" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="0.5" fill="#e8f4fa">LoRa UPS Battery Monitor</text>
-
-  <!-- signal path -->
-  <text x="64" y="176" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="1" fill="#8fd8ea">ESP32 + SX1276 → Heltec gateway → TTN → Firebase → Flutter</text>
-
-  <!-- radio diagram -->
+  <!-- field deployment: remote site with UPS cabinet and LoRa mast -->
   <g>
-    <rect x="806" y="70" width="86" height="72" rx="10" fill="#0b141c" stroke="#2b5670" stroke-width="1.5"/>
-    <text x="849" y="103" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1" fill="#8fd8ea">NODE</text>
-    <text x="849" y="122" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" fill="#5f7c8c">ESP32</text>
-
-    <rect x="940" y="70" width="86" height="72" rx="10" fill="#0b141c" stroke="#2b5670" stroke-width="1.5"/>
-    <text x="983" y="103" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1" fill="#8fd8ea">GATEWAY</text>
-    <text x="983" y="122" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" fill="#5f7c8c">HELTEC</text>
-
-    <path d="M892 106H940" stroke="#173040" stroke-width="2" stroke-dasharray="4 5"/>
-    <g fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.9">
-      <path d="M902 92Q914 106 902 120"/>
-      <path d="M914 84Q932 106 914 128"/>
+    <path d="M950 156H1150" stroke="#173040" stroke-width="1.5" stroke-dasharray="2 4"/>
+    <g stroke="#5f7c8c" stroke-width="2" fill="none">
+      <path d="M1000 156V88"/>
+      <path d="M1000 96L985 106M1000 96L1015 106"/>
+      <path d="M1000 116L982 128M1000 116L1018 128"/>
+      <path d="M988 156L1000 140L1012 156"/>
+      <path d="M1000 88V74"/>
+    </g>
+    <circle cx="1000" cy="72" r="2.6" fill="#f0b070"/>
+    <g fill="none" stroke="#22d3ee" stroke-width="1.8">
+      <circle class="ring" cx="1000" cy="72" r="34" style="animation-delay:0s"/>
+      <circle class="ring" cx="1000" cy="72" r="24" style="animation-delay:1s"/>
+      <circle class="ring" cx="1000" cy="72" r="14" style="animation-delay:2s"/>
     </g>
 
-    <rect x="1078" y="70" width="86" height="72" rx="10" fill="#0b141c" stroke="#1f4456" stroke-width="1.5"/>
-    <text x="1121" y="103" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1" fill="#34d399">CLOUD</text>
-    <text x="1121" y="122" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" fill="#5f7c8c">FIREBASE</text>
-    <path d="M1026 106H1078" stroke="#173040" stroke-width="2" stroke-dasharray="4 5"/>
+    <path d="M1072 134H1006" stroke="#173040" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <rect x="1072" y="112" width="56" height="44" rx="5" fill="#0b141c" stroke="#d98b3a" stroke-width="1.5"/>
+    <rect x="1082" y="124" width="36" height="20" rx="3" fill="none" stroke="#f0b070" stroke-width="1.5"/>
+    <rect x="1118" y="130" width="4" height="8" rx="1" fill="#f0b070"/>
+    <g>
+      <rect x="1086" y="128" width="5" height="12" fill="#22d3ee"/>
+      <rect x="1094" y="128" width="5" height="12" fill="#22d3ee"/>
+      <rect x="1102" y="128" width="5" height="12" fill="#22d3ee"/>
+      <rect class="warn" x="1110" y="128" width="5" height="12" fill="#f0b070" style="animation-delay:.6s"/>
+    </g>
+    <text x="1050" y="184" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9.5" letter-spacing="1.2" fill="#7f96a3">REMOTE SITE · 1.5 KM LINK</text>
   </g>
+
+  <!-- field-to-dashboard path -->
+  <g>
+    <!-- connectors -->
+    <g stroke="#173040" stroke-width="2" stroke-dasharray="3 4">
+      <path d="M240 263H285"/><path d="M465 263H510"/><path d="M690 263H735"/><path d="M915 263H960"/>
+    </g>
+    <g class="flow" stroke="#22d3ee" stroke-width="1.6" opacity=".55">
+      <path d="M240 263H285"/><path d="M465 263H510"/><path d="M690 263H735"/><path d="M915 263H960"/>
+    </g>
+    <g fill="#22d3ee" filter="url(#glow)">
+      <circle class="pkt" cx="240" cy="263" r="3.4" style="animation-delay:0s"/>
+      <circle class="pkt" cx="465" cy="263" r="3.4" style="animation-delay:1.2s"/>
+      <circle class="pkt" cx="690" cy="263" r="3.4" style="animation-delay:2.4s"/>
+      <circle class="pkt" cx="915" cy="263" r="3.4" style="animation-delay:3.6s"/>
+    </g>
+
+    <!-- stage cards -->
+    <g fill="#0b141c" stroke="#173040">
+      <rect x="60" y="196" width="180" height="134" rx="14"/>
+      <rect x="285" y="196" width="180" height="134" rx="14"/>
+      <rect x="510" y="196" width="180" height="134" rx="14"/>
+      <rect x="735" y="196" width="180" height="134" rx="14"/>
+      <rect x="960" y="196" width="180" height="134" rx="14"/>
+    </g>
+    <g fill="none" stroke="#22d3ee" stroke-width="2">
+      <rect class="stageGlow" x="60" y="196" width="180" height="134" rx="14" style="animation-delay:0s"/>
+      <rect class="stageGlow" x="285" y="196" width="180" height="134" rx="14" style="animation-delay:1.2s"/>
+      <rect class="stageGlow" x="510" y="196" width="180" height="134" rx="14" style="animation-delay:2.4s"/>
+      <rect class="stageGlow" x="735" y="196" width="180" height="134" rx="14" style="animation-delay:3.6s"/>
+      <rect class="stageGlow" x="960" y="196" width="180" height="134" rx="14" style="animation-delay:4.8s"/>
+    </g>
+
+    <!-- 1 · UPS battery -->
+    <g>
+      <rect x="116" y="222" width="62" height="44" rx="7" fill="#061018" stroke="#8fd8ea" stroke-width="2"/>
+      <rect x="178" y="238" width="7" height="12" rx="2" fill="#8fd8ea"/>
+      <rect x="124" y="233" width="9" height="22" rx="1.5" fill="#22d3ee"/>
+      <rect x="137" y="233" width="9" height="22" rx="1.5" fill="#22d3ee"/>
+      <rect x="150" y="233" width="9" height="22" rx="1.5" fill="#22d3ee"/>
+      <rect class="warn" x="163" y="233" width="9" height="22" rx="1.5" fill="#f0b070" style="animation-delay:0s"/>
+      <text x="150" y="296" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e8f4fa">UPS Battery</text>
+      <text x="150" y="314" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing=".6" fill="#7f96a3">REMOTE SITE · 11.8 V</text>
+    </g>
+
+    <!-- 2 · sensor node -->
+    <g>
+      <rect x="339" y="220" width="72" height="48" rx="6" fill="#0b1b24" stroke="#2b5670" stroke-width="1.5"/>
+      <rect x="357" y="234" width="30" height="20" rx="3" fill="#061018" stroke="#8fd8ea" stroke-width="1.2"/>
+      <g stroke="#5f7c8c" stroke-width="1.2">
+        <path d="M352 230h-5M352 238h-5M352 246h-5M352 254h-5M392 230h5M392 238h5M392 246h5M392 254h5"/>
+      </g>
+      <circle class="led" cx="402" cy="228" r="3" fill="#34d399" style="animation-delay:0s"/>
+      <path d="M406 220V202" stroke="#8fd8ea" stroke-width="1.6"/>
+      <g fill="none" stroke="#22d3ee" stroke-width="1.6">
+        <path class="wave" d="M410 204q7 8 0 16" style="animation-delay:0s"/>
+        <path class="wave" d="M416 200q10 12 0 24" style="animation-delay:.35s"/>
+        <path class="wave" d="M422 196q13 16 0 32" style="animation-delay:.7s"/>
+      </g>
+      <text x="375" y="296" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e8f4fa">Sensor Node</text>
+      <text x="375" y="314" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing=".6" fill="#7f96a3">ESP32 + SX1276</text>
+    </g>
+
+    <!-- 3 · LoRa gateway -->
+    <g>
+      <rect x="558" y="224" width="84" height="44" rx="8" fill="#0b141c" stroke="#2b5670" stroke-width="1.5"/>
+      <rect x="568" y="234" width="44" height="24" rx="3" fill="#061018" stroke="#1f4456" stroke-width="1.2"/>
+      <g fill="#34d399">
+        <rect class="sigbar" x="573" y="246" width="4" height="8" style="animation-delay:0s"/>
+        <rect class="sigbar" x="581" y="242" width="4" height="12" style="animation-delay:.25s"/>
+        <rect class="sigbar" x="589" y="238" width="4" height="16" style="animation-delay:.5s"/>
+      </g>
+      <path d="M612 224V202" stroke="#8fd8ea" stroke-width="1.6"/>
+      <circle cx="612" cy="200" r="3" fill="#22d3ee"/>
+      <g fill="none" stroke="#22d3ee" stroke-width="1.5">
+        <path class="wave" d="M616 194q6 6 0 12" style="animation-delay:.2s"/>
+        <path class="wave" d="M621 190q9 9 0 20" style="animation-delay:.55s"/>
+      </g>
+      <text x="600" y="296" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e8f4fa">LoRa Gateway</text>
+      <text x="600" y="314" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing=".6" fill="#7f96a3">HELTEC · 1.5 KM</text>
+    </g>
+
+    <!-- 4 · cloud -->
+    <g>
+      <rect x="785" y="214" width="80" height="24" rx="6" fill="#0b141c" stroke="#34d399" stroke-width="1.4"/>
+      <text x="825" y="230" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1" fill="#34d399">TTN</text>
+      <path d="M825 238V248" stroke="#173040" stroke-width="1.6"/>
+      <circle class="sync" cx="825" cy="238" r="2.6" fill="#22d3ee" style="animation-delay:0s"/>
+      <rect x="785" y="248" width="80" height="24" rx="6" fill="#0b141c" stroke="#8fd8ea" stroke-width="1.4"/>
+      <text x="825" y="264" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" letter-spacing=".8" fill="#8fd8ea">FIREBASE</text>
+      <text x="825" y="296" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e8f4fa">Cloud</text>
+      <text x="825" y="314" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing=".6" fill="#7f96a3">LORAWAN · MQTT</text>
+    </g>
+
+    <!-- 5 · Flutter app -->
+    <g>
+      <rect x="1020" y="206" width="60" height="80" rx="11" fill="#061018" stroke="#8fd8ea" stroke-width="1.6"/>
+      <rect x="1027" y="214" width="46" height="58" rx="4" fill="#0a1119" stroke="#173040" stroke-width="1.2"/>
+      <rect x="1031" y="220" width="38" height="10" rx="2" fill="none" stroke="#5f7c8c" stroke-width="1.2"/>
+      <rect x="1069" y="223" width="3" height="4" rx="1" fill="#5f7c8c"/>
+      <rect x="1033" y="222" width="26" height="6" rx="1" fill="#34d399"/>
+      <text x="1050" y="246" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="9" fill="#e8f4fa">11.8 V</text>
+      <g class="alert" style="animation-delay:.4s">
+        <rect x="1031" y="252" width="38" height="12" rx="6" fill="#2a1c0c" stroke="#f0b070" stroke-width="1"/>
+        <text x="1050" y="261" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="7.5" letter-spacing=".5" fill="#f0b070">ALERT</text>
+      </g>
+      <text x="1050" y="296" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#e8f4fa">Flutter App</text>
+      <text x="1050" y="314" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing=".6" fill="#7f96a3">ALERTS IN 2–3 S</text>
+    </g>
+  </g>
+
+  <!-- live signal trace -->
+  <path d="M60 358H200l14-9h112l14 9h150l14-9h112l14 9h150l14-9h112l14 9h150l14-9h56"
+        fill="none" stroke="url(#sig)" stroke-width="2" stroke-linejoin="round" opacity=".7"/>
+  <circle class="scan" cx="60" cy="358" r="3" fill="#f0b070" filter="url(#glow)" style="animation-delay:0s"/>
 
   <!-- metric tiles -->
   <g>
-    <rect x="64" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
-    <text x="86" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">≤0.1 V</text>
-    <text x="86" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">VOLTAGE ERROR</text>
+    <rect x="60" y="372" width="255" height="96" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="82" y="414" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">≤0.1 V</text>
+    <text x="82" y="440" font-family="Consolas, Menlo, monospace" font-size="10.5" letter-spacing="1" fill="#7f96a3">VOLTAGE ERROR</text>
 
-    <rect x="332" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
-    <text x="354" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">1.5 km</text>
-    <text x="354" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">RELIABLE RANGE · 3.3 KM MAX</text>
+    <rect x="335" y="372" width="255" height="96" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="357" y="414" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">1.5 km</text>
+    <text x="357" y="440" font-family="Consolas, Menlo, monospace" font-size="10.5" letter-spacing="1" fill="#7f96a3">RELIABLE RANGE · 3.3 KM MAX</text>
 
-    <rect x="600" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
-    <text x="622" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">2–3 s</text>
-    <text x="622" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">READING TO DASHBOARD</text>
+    <rect x="610" y="372" width="255" height="96" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="632" y="414" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">2–3 s</text>
+    <text x="632" y="440" font-family="Consolas, Menlo, monospace" font-size="10.5" letter-spacing="1" fill="#7f96a3">READING TO DASHBOARD</text>
 
-    <rect x="868" y="222" width="250" height="100" rx="12" fill="#0c1620" stroke="#173040"/>
-    <text x="890" y="268" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">6+ mo</text>
-    <text x="890" y="296" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1" fill="#7f96a3">ON 9 V · 8 mA, &lt;100 µA SLEEP</text>
-  </g>
-
-  <!-- waveform -->
-  <path d="M64 372H200L216 356H320L336 372H470L486 356H590L606 372H740L756 356H860L876 372H1010L1026 356H1136"
-        fill="none" stroke="url(#sig)" stroke-width="2.5" stroke-linejoin="round" filter="url(#glow)"/>
-  <g fill="#f0b070">
-    <circle cx="1136" cy="356" r="2.6"/>
-    <circle cx="64" cy="372" r="2.6" opacity="0.6"/>
+    <rect x="885" y="372" width="255" height="96" rx="12" fill="#0c1620" stroke="#173040"/>
+    <text x="907" y="414" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">6+ mo</text>
+    <text x="907" y="440" font-family="Consolas, Menlo, monospace" font-size="10.5" letter-spacing="1" fill="#7f96a3">ON 9 V · 8 mA, &lt;100 µA SLEEP</text>
   </g>
 
   <!-- footer -->
-  <text x="64" y="405" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.5" fill="#6f8794">SOROTI UNIVERSITY · BENG ELECTRONICS &amp; COMPUTER ENGINEERING</text>
-  <text x="1136" y="405" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="11" fill="#22d3ee">portfolio/#iot</text>
+  <text x="64" y="500" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.5" fill="#6f8794">SOROTI UNIVERSITY · BENG ELECTRONICS &amp; COMPUTER ENGINEERING</text>
+  <text x="1136" y="500" text-anchor="end" font-family="Consolas, Menlo, monospace" font-size="11" fill="#22d3ee">portfolio/#iot</text>
 </svg>
